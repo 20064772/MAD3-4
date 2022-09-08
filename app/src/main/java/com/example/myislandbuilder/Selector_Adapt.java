@@ -35,6 +35,7 @@ public class Selector_Adapt extends RecyclerView.Adapter<SelectorViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return sd.size();
     }
 }

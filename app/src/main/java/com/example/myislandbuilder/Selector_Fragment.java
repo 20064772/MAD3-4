@@ -38,7 +38,7 @@ public class Selector_Fragment extends Fragment {
 
         View v =  inflater.inflate(R.layout.fragment_selector, container, false);
         RecyclerView rv = v.findViewById(R.id.SelectorRecyclerView);
-        rv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         Selector_Adapt selectorAdaptor = new Selector_Adapt();
         rv.setAdapter(selectorAdaptor);
         return v;

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/drawable/ic_building1.xml" value="0.2695" />
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/layout/fragment__selector.xml" value="0.459375" />
@@ -12,6 +13,11 @@
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/layout/fragment_selector_.xml" value="0.459375" />
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/layout/grid_cell.xml" value="0.25" />
         <entry key="..\:/Downloads/islandbuilder/islandbuilder/MyIslandBuilder/app/src/main/res/layout/list_selection.xml" value="0.48020833333333335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.192481884057971" />
+        <entry key="app/src/main/res/layout/fragment_map.xml" value="0.13043478260869565" />
+        <entry key="app/src/main/res/layout/fragment_selector.xml" value="0.22864583333333333" />
+        <entry key="app/src/main/res/layout/grid_cell.xml" value="0.192481884057971" />
+        <entry key="app/src/main/res/layout/list_selection.xml" value="0.192481884057971" />
       </map>
     </option>
   </component>
