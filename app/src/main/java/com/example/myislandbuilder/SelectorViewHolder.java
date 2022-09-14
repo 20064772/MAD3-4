@@ -17,5 +17,12 @@ public class SelectorViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         selectorImage = itemView.findViewById(R.id.image);
         selectorImageName = itemView.findViewById(R.id.imageName);
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    
+            }
+        });
     }
 }

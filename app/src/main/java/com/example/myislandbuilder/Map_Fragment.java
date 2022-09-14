@@ -24,6 +24,7 @@ public class Map_Fragment extends Fragment {
     }
 
 
+
     // TODO: Rename and change types and number of parameters
     public static Map_Fragment newInstance() {
         Map_Fragment fragment = new Map_Fragment();
@@ -40,11 +41,13 @@ public class Map_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        MapData md = MapData.get();
         View v = inflater.inflate(R.layout.fragment_map, container, false);
         RecyclerView rv = v.findViewById(R.id.mapRecyclerView);
         rv.setLayoutManager(new GridLayoutManager(getActivity(), MapData.HEIGHT, GridLayoutManager.HORIZONTAL, false));
-        Map_Adapt mapAdaptor = new Map_Adapt(v);
+        Map_Adapt mapAdaptor = new Map_Adapt(md, v);
         rv.setAdapter(mapAdaptor);
         return v;
+
     }
 }

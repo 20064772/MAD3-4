@@ -10,12 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 public class Map_Adapt extends RecyclerView.Adapter<MapViewHolder> {
 
     MapData md;
-    View parent;
-
-    public Map_Adapt(View v) {
-
-        md = MapData.get();
-        parent = v;
+    View pv;
+    public Map_Adapt(MapData md, View pv) {
+       this.md = md;
+       this.pv = pv;
     }
 
     @NonNull
@@ -23,8 +21,14 @@ public class Map_Adapt extends RecyclerView.Adapter<MapViewHolder> {
     public MapViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.grid_cell,parent,false);
-        MapViewHolder myViewHolder = new MapViewHolder(v, parent);
+        int size = pv.getMeasuredHeight() / MapData.HEIGHT + 1;// no idea what the fuck is going on
+        ViewGroup.LayoutParams lp = v.getLayoutParams();
+        lp.width = size;
+        lp.height = size;
+        MapViewHolder myViewHolder = new MapViewHolder(v);
         return myViewHolder;
+
+
     }
 
     @Override
@@ -36,13 +40,12 @@ public class Map_Adapt extends RecyclerView.Adapter<MapViewHolder> {
         holder.TR.setImageResource(me.getNorthEast());
         holder.BL.setImageResource(me.getSouthWest());
         holder.BR.setImageResource(me.getSouthEast());
+        //holder.full.setImageResource(me.getStructure().getDrawableId());
     }
 
     @Override
     public int getItemCount() {
-
-        int i = md.HEIGHT*md.WIDTH;
-        return i;
+        return MapData.HEIGHT*MapData.WIDTH;
     }
 
 
