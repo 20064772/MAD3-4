@@ -10,22 +10,20 @@ import androidx.recyclerview.widget.RecyclerView;
 public class Map_Adapt extends RecyclerView.Adapter<MapViewHolder> {
 
     MapData md;
-    MapElement me;
-    public Map_Adapt() {
+    View parent;
+
+    public Map_Adapt(View v) {
+
         md = MapData.get();
-        me = md.get(2,6);
+        parent = v;
     }
 
     @NonNull
     @Override
     public MapViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        /*LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.grid_cell,parent,false);
-        MapViewHolder myViewHolder = new MapViewHolder(v);
-        return myViewHolder;*/
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_cell, parent, false);
-        MapViewHolder myViewHolder = new MapViewHolder(view);
+        MapViewHolder myViewHolder = new MapViewHolder(v, parent);
         return myViewHolder;
     }
 
@@ -43,8 +41,8 @@ public class Map_Adapt extends RecyclerView.Adapter<MapViewHolder> {
     @Override
     public int getItemCount() {
 
-        int height = md.HEIGHT;
-        return height;
+        int i = md.HEIGHT*md.WIDTH;
+        return i;
     }
 
 

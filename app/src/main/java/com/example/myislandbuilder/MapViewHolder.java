@@ -14,9 +14,10 @@ public class MapViewHolder extends RecyclerView.ViewHolder {
         ImageView TR;
         ImageView BL;
         ImageView BR;
-    public MapViewHolder(@NonNull View itemView) {
+
+    public MapViewHolder(@NonNull View itemView, View parent) {
         super(itemView);
-        int size = itemView.getMeasuredHeight() / MapData.HEIGHT + 1;
+        int size = parent.getMeasuredHeight() / MapData.HEIGHT + 1;
         ViewGroup.LayoutParams lp = itemView.getLayoutParams();
         lp.width = size;
         lp.height = size;

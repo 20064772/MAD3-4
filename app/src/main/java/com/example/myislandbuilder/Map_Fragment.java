@@ -43,7 +43,7 @@ public class Map_Fragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_map, container, false);
         RecyclerView rv = v.findViewById(R.id.mapRecyclerView);
         rv.setLayoutManager(new GridLayoutManager(getActivity(), MapData.HEIGHT, GridLayoutManager.HORIZONTAL, false));
-        Map_Adapt mapAdaptor = new Map_Adapt();
+        Map_Adapt mapAdaptor = new Map_Adapt(v);
         rv.setAdapter(mapAdaptor);
         return v;
     }
